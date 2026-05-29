@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOEIC Sprint</title>
+  <meta name="description" content="TOEIC 500→730を目指すための短時間スプリント学習アプリ" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">TOEIC 500 → 730</p>
+      <h1>TOEIC Sprint</h1>
+      <p class="lead">苦手単語・Part 5・ビジネス英語を、1問ずつ高速で確認する学習アプリです。</p>
+    </section>
+
+    <section class="panel">
+      <div class="topbar">
+        <div>
+          <p class="label">Progress</p>
+          <strong id="progress">1 / 10</strong>
+        </div>
+        <div class="score">
+          <span id="correctCount">0</span> correct
+        </div>
+      </div>
+      <div class="bar"><div id="barFill"></div></div>
+
+      <article id="card" class="card">
+        <p id="category" class="category"></p>
+        <h2 id="question"></h2>
+        <div id="choices" class="choices"></div>
+        <div id="result" class="result hidden"></div>
+      </article>
+
+      <div class="actions">
+        <button id="againBtn" class="secondary">間違えた問題だけ復習</button>
+        <button id="resetBtn" class="secondary">記録リセット</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
